@@ -12,6 +12,8 @@ form {
     margin-top: 200px;
     min-width: 200px;
     box-sizing: border-box;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -41,6 +43,8 @@ textarea {
     min-width: 500px;
     border: 2px solid #127A89;
     border-radius: 8px;
+    box-sizing: border-box;
+    padding: 10px;
     font-size: 15px;
 }
 
