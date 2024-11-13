@@ -110,3 +110,7 @@ span {
     font-size: 20px;
     font-weight: 700;
 }
+
+#subbtn:hover {
+    cursor: pointer;
+}

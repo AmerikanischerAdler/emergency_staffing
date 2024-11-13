@@ -1,0 +1,47 @@
+.data {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#heading {
+    position: fixed;
+    margin-bottom: 150px;
+}
+
+.empty {
+    height: 100px;
+}
+
+.list-item {
+    width: 80%;
+    min-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #8C837C;;
+    color: #fff;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 12px;
+}
+
+.list-item h3 {
+    font-size: 20px;
+}
+
+.list-item:not(#heading):hover {
+    cursor: pointer;
+}
+
+.element {
+    width: 100px;
+    border: 2px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

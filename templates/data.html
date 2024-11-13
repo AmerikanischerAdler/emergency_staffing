@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block page %}Current Data{% endblock %}
+
+{% block style %}data{% endblock %}
+
+{% block title %}Data{% endblock %}
+
+{% block content %}
+  <div class="data">
+    <div class="empty"></div>
+    <div id="heading" class="list-item head">
+      <h3>DATE</h3>
+      <h3>HOUR</h3>
+      <h3>Number of Patients</h3>
+      <h3>Nurses Needed</h3>
+      <h3>Target Number of Nurses</h3>
+    </div>
+  {% if data %}
+    {% for x in data|reverse %}
+      {% if x %}
+      <div class="list-item">
+        {% for el in x[:-1] %}
+        <div class="element">
+          <p>{{ el }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="data">
+    <h1>{{ error }}</h1>
+  </div>
+  {% endif %}
+  <script src="{{ url_for('static', filename='data.js') }}"></script>
+{% endblock %}

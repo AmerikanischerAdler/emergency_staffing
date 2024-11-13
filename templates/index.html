@@ -4,12 +4,14 @@
 
 {% block style %}style{% endblock %}
 
+{% block title %}Calculator{% endblock %}
+
 {% block content %}
   <div class="contain">
-    <form>
-      <input type="date">
+    <form id="nurseCount" action="/sub" method="POST">
+      <input name="date" type="date">
       <div class="info">
-        <input type="number" placeholder="Number of Patients">
+        <input name="patients" type="number" placeholder="Number of Patients">
         <div class="arrows">
           <svg class="svgl" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m19 12l12 12l-12 12"/></svg>
           <svg class="svgr" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m19 12l12 12l-12 12"/></svg>
@@ -19,7 +21,7 @@
         </div>
       </div>
       <div class="info">
-        <input type="number" min="1" max="24" placeholder="Hour of Day (1-24)">
+        <input name="hour" type="number" min="1" max="24" placeholder="Hour of Day (1-24)">
         <div class="arrows">
           <svg class="svgl" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m19 12l12 12l-12 12"/></svg>
           <svg class="svgr" width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="m19 12l12 12l-12 12"/></svg>
@@ -28,8 +30,8 @@
           <span>Target Number of Nurses</span>
         </div>
       </div>
-      <textarea placeholder="Comments"></textarea>
-      <button id="subbtn" type="submit">Submit</button>
+      <textarea name="comment" placeholder="Comments"></textarea>
+      <button id="subbtn" type="submit" form="nurseCount">Submit</button>
     </form>
   </div>
 {% endblock %}
