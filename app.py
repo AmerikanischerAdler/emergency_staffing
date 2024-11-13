@@ -57,18 +57,6 @@ def data():
 
     return render_template('data.html', data=data, error=error)
 
-@app.route('/history')
-def history():
-    try:
-        with open('history.csv', newline='') as csvfile:
-            reader = csv.reader(csvfile)
-            hist = list(reader)
-    except:
-        data = None
-        error = "No Available Data"
- 
-    return render_template('history.html', hist=hist)
-
 if __name__ == '__main__':
     app.run(debug=True)
 
