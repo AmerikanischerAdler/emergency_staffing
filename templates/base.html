@@ -51,7 +51,9 @@
     }
 
     .options a {
+      min-width: 100px;
       text-decoration: none;
+      text-align: center;
       font-size: 20px;
       background-color: #8C837C;
       color: #fff;
@@ -70,6 +72,12 @@
       min-height: 100vh;
       background-image: linear-gradient(to bottom right, #97D5E7, #127A89);
     }
+
+    @media screen and (max-width: 1010px) {
+      .head-contain h1 {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
@@ -80,7 +88,7 @@
       </div>
       <h1>Staffing Guidance Calculator</h1>
       <div class="options">
-        <a href="cur_data">Current Data</a>
+        <a href="data">Current Data</a>
         <a href="history">Data History</a>
       </div>
     </div>
