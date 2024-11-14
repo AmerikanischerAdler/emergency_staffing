@@ -13,6 +13,16 @@
     top: 120px;
 }
 
+#heading h3:not(#nurseNum) {
+    width: 170px;
+    text-align: center;
+}
+
+#nurseNum {
+    width: 220px;
+    text-align: center;
+}
+
 .list-item {
     width: 80%;
     min-width: 600px;
@@ -35,11 +45,15 @@
 }
 
 .element {
-    width: 100px;
-    border: 2px solid #000;
+    width: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+}
+
+.target-nurses {
+    width: 220px;
 }
 
 .modal {

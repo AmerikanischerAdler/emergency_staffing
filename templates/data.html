@@ -13,31 +13,36 @@
       <h3>HOUR</h3>
       <h3>Number of Patients</h3>
       <h3>Nurses Needed</h3>
-      <h3>Target Number of Nurses</h3>
+      <h3 id="nurseNum">Target Number of Nurses</h3>
     </div>
     <div class="data">
 
-    <div id="modal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div class="com-info">
-          <!-- date - hour -->
-          <h4>12/3/24 - Hour 3</h4>
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <div class="com-info">
+            <h4 id="com-info"></h4>
+          </div>
+          <p id="com-title"><strong>Comment(s) - </strong></p>
+          <p id="commentText"></p>
         </div>
-        <p id="com-title"><strong>Comment(s) - </strong></p>
-        <p id="commentText">Nisi amet adipisicing non excepteur do proident aute veniam. Ipsum cupidatat tempor veniam excepteur reprehenderit. Adipisicing minim commodo incididunt nostrud eu ad dolore ad qui ea ipsum cupidatat nisi aliqua elit. Id enim et nulla.</p>
       </div>
-    </div>
 
   {% if data %}
     {% for x in data %}
       {% if x %}
-      <div class="list-item">
+      <div class="list-item" data-comment="{{ x[-1] }}" data-date="{{ x[0] }}" data-hour="{{ x[1] }}">
         {% for el in x[:-1] %}
         <div class="element">
           <p>{{ el }}</p>
         </div>
         {% endfor %}
+        <div class="element">
+          <p id="nureseNeeded">00</p>
+        </div>
+        <div class="element target-nurses">
+          <p id="targetNurses">00</p>
+        </div>
       </div>
       {% endif %}
     {% endfor %}
