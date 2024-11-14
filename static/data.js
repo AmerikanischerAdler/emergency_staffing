@@ -36,49 +36,17 @@ infos.forEach((e) => {
 });
 
 function calcNursesNeeded(patients) {
-    if (patients === 1) {
+    if (patients === 1 || patients === 2 || patients === 3 || patients === 4 || patients === 5 || patients === 6 || patients === 7 || patients === 8 || patients === 9) {
         return 3;
-    } else if (patients === 2) {
-        return 3;
-    } else if (patients === 3) {
-        return 3;
-    } else if (patients === 4) {
-        return 3;
-    } else if (patients === 5) {
-        return 3;
-    } else if (patients === 6) {
-        return 3;
-    } else if (patients === 7) {
-        return 3;
-    } else if (patients === 8) {
-        return 3;
-    } else if (patients === 9) {
-        return 3;
-    } else if (patients === 10) {
+    } else if (patients === 10 || patients === 11 || patients === 12) {
         return 4;
-    } else if (patients === 11) {
-        return 4;
-    } else if (patients === 12) {
-        return 4;
-    } else if (patients === 13) {
+    } else if (patients === 13 || patients === 14 || patients === 15) {
         return 5;
-    } else if (patients === 14) {
-        return 5;
-    } else if (patients === 15) {
-        return 5;
-    } else if (patients === 16) {
+    } else if (patients === 16 || patients === 17 || patients === 18) {
         return 6;
-    } else if (patients === 17) {
-        return 6;
-    } else if (patients === 18) {
-        return 6;
-    } else if (patients === 19) {
+    } else if (patients === 19 || patients === 20) {
         return 7;
-    } else if (patients === 20) {
-        return 7;
-    } else if (patients === 21) {
-        return 7;
-    } else if (patients === 22) {
+    } else if (patients === 21 || patients === 22) {
         return 8;
     } else {
         return "idk";
@@ -86,56 +54,18 @@ function calcNursesNeeded(patients) {
 }
 
 function calcTargetNurses(hour) {
-    if (hour === 1) {
+    if (hour === 1 || hour === 2 || hour === 3 || hour === 4 || hour === 5 || hour === 6 || hour === 7) {
+        return 2;
+    } else if (hour === 8 || hour === 9 || hour === 10 || hour === 11) {
         return 4;
-    } else if (hour === 2) {
-        return 2;
-    } else if (hour === 3) {
-        return 2;
-    } else if (hour === 4) {
-        return 2;
-    } else if (hour === 5) {
-        return 2;
-    } else if (hour === 6) {
-        return 2;
-    } else if (hour === 7) {
-        return 2;
-    } else if (hour === 8) {
-        return 3;
-    } else if (hour === 9) {
-        return 3;
-    } else if (hour === 10) {
-        return 4;
-    } else if (hour === 11) {
-        return 4;
-    } else if (hour === 12) {
-        return 5;
-    } else if (hour === 13) {
+    } else if (hour === 12 || hour === 13 || hour === 14 || hour === 15) {
         return 6;
-    } else if (hour === 14) {
-        return 6;
-    } else if (hour === 15) {
-        return 6;
-    } else if (hour === 16) {
-        return 6;
-    } else if (hour === 17) {
-        return 6;
-    } else if (hour === 18) {
+    } else if (hour === 16 || hour === 17) {
         return 7;
-    } else if (hour === 19) {
-        return 7;
-    } else if (hour === 20) {
-        return 7;
-    } else if (hour === 21) {
-        return 7;
-    } else if (hour === 22) {
-        return 5;
-    } else if (hour === 23) {
-        return 5;
-    } else if (hour === 24) {
-        return 4;
+    } else if (hour === 18 || hour === 19 || hour === 20) {
+        return 8;
     } else {
-        return "idk";
+        return 3; 
     }
 }
 
