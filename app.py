@@ -5,8 +5,6 @@ import csv
 
 app = Flask(__name__)
 
-info = ["", "", "", ""]
-
 @app.route('/')
 @app.route('/home')
 def home():
@@ -34,7 +32,6 @@ def sub():
     else: 
         comment = ""
 
-    global info
     info = [date, hour, patients, comment]
     
     with open("history.csv", "a", newline='') as hist:
@@ -61,7 +58,7 @@ def data():
     data.sort(key=lambda x: (x[0], x[1]), reverse=True)
     
     for row in data:
-        row[0] = row[0].strftime("%Y-%m-%d")
+        row[0] = row[0].strftime("%m/%d/%Y")
     
     return render_template('data.html', data=data)
 

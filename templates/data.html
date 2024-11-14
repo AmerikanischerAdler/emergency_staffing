@@ -31,17 +31,17 @@
   {% if data %}
     {% for x in data %}
       {% if x %}
-      <div class="list-item" data-comment="{{ x[-1] }}" data-date="{{ x[0] }}" data-hour="{{ x[1] }}">
+      <div class="list-item" data-comment="{{ x[-1] }}" data-date="{{ x[0] }}" data-hour="{{ x[1] }}" data-patients="{{ x[2] }}">
         {% for el in x[:-1] %}
         <div class="element">
           <p>{{ el }}</p>
         </div>
         {% endfor %}
         <div class="element">
-          <p id="nureseNeeded">00</p>
+          <p class="nursesNeeded">00</p>
         </div>
         <div class="element target-nurses">
-          <p id="targetNurses">00</p>
+          <p class="targetNurses">00</p>
         </div>
       </div>
       {% endif %}
