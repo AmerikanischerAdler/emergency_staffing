@@ -8,7 +8,6 @@
 
 {% block content %}
   <div class="data">
-    <div class="empty"></div>
     <div id="heading" class="list-item head">
       <h3>DATE</h3>
       <h3>HOUR</h3>
@@ -16,8 +15,22 @@
       <h3>Nurses Needed</h3>
       <h3>Target Number of Nurses</h3>
     </div>
+    <div class="data">
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="com-info">
+          <!-- date - hour -->
+          <h4>12/3/24 - Hour 3</h4>
+        </div>
+        <p id="com-title"><strong>Comment(s) - </strong></p>
+        <p id="commentText">Nisi amet adipisicing non excepteur do proident aute veniam. Ipsum cupidatat tempor veniam excepteur reprehenderit. Adipisicing minim commodo incididunt nostrud eu ad dolore ad qui ea ipsum cupidatat nisi aliqua elit. Id enim et nulla.</p>
+      </div>
+    </div>
+
   {% if data %}
-    {% for x in data|reverse %}
+    {% for x in data %}
       {% if x %}
       <div class="list-item">
         {% for el in x[:-1] %}
@@ -28,11 +41,10 @@
       </div>
       {% endif %}
     {% endfor %}
-  </div>
+    </div>
   {% else %}
-  <div class="data">
-    <h1>{{ error }}</h1>
-  </div>
+    <h1>No Available Data</h1>
   {% endif %}
+  </div>
   <script src="{{ url_for('static', filename='data.js') }}"></script>
 {% endblock %}

@@ -45,17 +45,25 @@ def sub():
 
 @app.route('/data')
 def data():
-    try:
-        with open('history.csv', newline='') as csvfile:
-            reader = csv.reader(csvfile)
-            rows = list(reader)
-            data = rows[-4:]
-        error = None
-    except:
-        data = None
-        error = "No Available Data"
+    data = []
+    with open("history.csv", "r", newline="") as file:
+        reader = csv.reader(file)
+        for row in reader:
+            try:
+                row[0] = datetime.strptime(row[0], "%Y-%m-%d")
+                row[1] = int(row[1])
 
-    return render_template('data.html', data=data, error=error)
+            except (IndexError, ValueError):
+                continue  
+        
+            data.append(row)
+    
+    data.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    
+    for row in data:
+        row[0] = row[0].strftime("%Y-%m-%d")
+    
+    return render_template('data.html', data=data)
 
 if __name__ == '__main__':
     app.run(debug=True)
