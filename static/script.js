@@ -6,6 +6,12 @@ function updateTargetNurses() {
         if (targetEl) {
             targetEl.textContent = targetNurses;
         }
+    } else {
+        const targetNurses = "Must be 1-24"; 
+        const targetEl = document.getElementById("targetNurses"); 
+        if (targetEl) {
+            targetEl.textContent = targetNurses;
+        }
     }
 }
 
@@ -13,6 +19,12 @@ function updateNursesNeeded() {
     const patients = parseInt(document.getElementById("patients").value);
     if (!isNaN(patients) && patients > 0) {
         const nursesNeeded = calcNursesNeeded(patients);
+        const nursesNeededEl = document.getElementById("nursesNeeded");
+        if (nursesNeededEl) {
+            nursesNeededEl.textContent = nursesNeeded;
+        }
+    } else {
+        const nursesNeeded = "Must be a Number";
         const nursesNeededEl = document.getElementById("nursesNeeded");
         if (nursesNeededEl) {
             nursesNeededEl.textContent = nursesNeeded;
