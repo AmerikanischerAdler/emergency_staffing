@@ -44,28 +44,30 @@ function calcNursesNeeded(patients) {
         return 5;
     } else if (patients === 16 || patients === 17 || patients === 18) {
         return 6;
-    } else if (patients === 19 || patients === 20) {
+    } else if (patients === 19 || patients === 20 || patients === 21) {
         return 7;
-    } else if (patients === 21 || patients === 22) {
+    } else if (patients === 22) {
         return 8;
     } else {
-        return "idk";
+        return 8;
     }
 }
 
 function calcTargetNurses(hour) {
-    if (hour === 1 || hour === 2 || hour === 3 || hour === 4 || hour === 5 || hour === 6 || hour === 7) {
+    if (hour === 2 || hour === 3 || hour === 4 || hour === 5 || hour === 6 || hour === 7) {
         return 2;
-    } else if (hour === 8 || hour === 9 || hour === 10 || hour === 11) {
+    } else if (hour === 8 || hour === 9) {
+        return 3;
+    } else if (hour === 1 || hour === 10 || hour === 11 || hour === 24) {
         return 4;
-    } else if (hour === 12 || hour === 13 || hour === 14 || hour === 15) {
+    } else if (hour === 12 || hour === 22 || hour === 23) {
+        return 5;
+    } else if (hour === 13 || hour === 14 || hour === 15 || hour === 16 || hour === 17) {
         return 6;
-    } else if (hour === 16 || hour === 17) {
+    } else if (hour === 18 || hour === 19 || hour === 20 || hour === 21) {
         return 7;
-    } else if (hour === 18 || hour === 19 || hour === 20) {
-        return 8;
     } else {
-        return 3; 
+        return "Must be 1-24"; 
     }
 }
 
