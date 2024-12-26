@@ -12,7 +12,9 @@ A page for ER Nurses and Admin
 
 ### Main Features:
 
-Coming Soon!
+1) Calculator for Number of Nurses to be Scheduled
+
+2) Simple Presentation of Collected Data
 
 ## Installation
 
